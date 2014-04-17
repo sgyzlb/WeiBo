@@ -8,6 +8,6 @@
 
 #import "WaterFlowViewController.h"
 
-@interface DiscoverViewController : WaterFlowViewController
+@interface DiscoverViewController : WaterFlowViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @end

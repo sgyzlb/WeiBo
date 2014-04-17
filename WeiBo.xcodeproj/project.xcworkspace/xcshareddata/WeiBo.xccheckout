@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AD73826C-59FC-4E17-9266-59F45EC19F0D</string>
+	<string>F137767C-7470-48C6-851F-6C9CE2FEC77F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>WeiBo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D181E2F5-F6E2-425D-B5C4-EB88DF9D8740</key>
-		<string>https://github.com/candygu2011/weather.git</string>
+		<key>D447320E-0055-483A-AC5F-280750BEE64D</key>
+		<string>https://github.com/candygu2011/WeiBo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WeiBo/WeiBo.xcodeproj/project.xcworkspace</string>
+	<string>WeiBo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D181E2F5-F6E2-425D-B5C4-EB88DF9D8740</key>
-		<string>../../..</string>
+		<key>D447320E-0055-483A-AC5F-280750BEE64D</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/candygu2011/weather.git</string>
+	<string>https://github.com/candygu2011/WeiBo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D181E2F5-F6E2-425D-B5C4-EB88DF9D8740</string>
+	<string>D447320E-0055-483A-AC5F-280750BEE64D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D181E2F5-F6E2-425D-B5C4-EB88DF9D8740</string>
+			<string>D447320E-0055-483A-AC5F-280750BEE64D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MJ</string>
+			<string>WeiBo</string>
 		</dict>
 	</array>
 </dict>

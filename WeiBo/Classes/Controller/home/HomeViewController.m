@@ -58,7 +58,7 @@ BarButtonItem要显示图片 用initWithCustomView：方法
     // 0 添加下拉刷新和上提加载
     _header = [[MJRefreshHeaderView alloc] init];
     _header.delegate = self;
-    [_header beginRefreshing];
+//    [_header beginRefreshing];
     _header.scrollView  = self.tableView;
     
    _footer = [[MJRefreshFooterView alloc] init];

@@ -14,7 +14,7 @@
 @interface StatuesDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)   StatuesCellFrame * statuesFrame;
 // 添加UISegmentedControl的点击分类页面
-@property (nonatomic,strong) UITableView *
+
 
 @end
 
@@ -44,7 +44,7 @@
     
 }
 
-
+// 布局
 -(void)_creatSubView
 {
     CGSize size = self.view.frame.size;
