@@ -1006,6 +1006,9 @@
 		790133B718FF8CDC00FEA276 /* WaterFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 790133B618FF8CDC00FEA276 /* WaterFlowCell.m */; };
 		79D13A6F18FFB760009479A9 /* UserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A6E18FFB760009479A9 /* UserView.m */; };
 		79D13A7518FFCF9E009479A9 /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13A7418FFCF9E009479A9 /* UserView.xib */; };
+		79D13A7918FFDF4D009479A9 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A7718FFDF4D009479A9 /* FriendsViewController.m */; };
+		79D13A7A18FFDF4D009479A9 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */; };
+		79D13A7D18FFFEA8009479A9 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A7C18FFFEA8009479A9 /* Cell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2092,6 +2095,11 @@
 		79D13A6D18FFB760009479A9 /* UserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserView.h; sourceTree = "<group>"; };
 		79D13A6E18FFB760009479A9 /* UserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserView.m; sourceTree = "<group>"; };
 		79D13A7418FFCF9E009479A9 /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		79D13A7618FFDF4D009479A9 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		79D13A7718FFDF4D009479A9 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
+		79D13A7B18FFFEA8009479A9 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		79D13A7C18FFFEA8009479A9 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3456,9 +3464,14 @@
 			children = (
 				34A6589A18DED6E700D34948 /* ProfileViewController.h */,
 				34A6589B18DED6E700D34948 /* ProfileViewController.m */,
+				79D13A7618FFDF4D009479A9 /* FriendsViewController.h */,
+				79D13A7718FFDF4D009479A9 /* FriendsViewController.m */,
+				79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */,
 				79D13A6D18FFB760009479A9 /* UserView.h */,
 				79D13A6E18FFB760009479A9 /* UserView.m */,
 				79D13A7418FFCF9E009479A9 /* UserView.xib */,
+				79D13A7B18FFFEA8009479A9 /* Cell.h */,
+				79D13A7C18FFFEA8009479A9 /* Cell.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -4714,6 +4727,7 @@
 				34A49AE718E2F6D800DD6AB8 /* common_card_top_background 4.png in Resources */,
 				34A49BD618E2F6D800DD6AB8 /* common_slider_controler@2x.png in Resources */,
 				340D0CB018E0864400FF537D /* navigationbar_compose_highlighted.png in Resources */,
+				79D13A7A18FFDF4D009479A9 /* FriendsViewController.xib in Resources */,
 				34A49B8018E2F6D800DD6AB8 /* common_icon_membership_expired 5.png in Resources */,
 				34A49B3A18E2F6D800DD6AB8 /* common_icon_check 3.png in Resources */,
 				34A49BCD18E2F6D800DD6AB8 /* common_shadow_top@2x 2.png in Resources */,
@@ -5429,11 +5443,13 @@
 				34A658B318DF017500D34948 /* UIBarButtonItem+creat.m in Sources */,
 				34A49CB218E3331600DD6AB8 /* AccountTool.m in Sources */,
 				3454419E18DD84DD002A09C7 /* AppDelegate.m in Sources */,
+				79D13A7918FFDF4D009479A9 /* FriendsViewController.m in Sources */,
 				34B5EA4218E8242000B50BB7 /* MJRefreshBaseView.m in Sources */,
 				345441D018DD959C002A09C7 /* NewFeatherViewController.m in Sources */,
 				790133B718FF8CDC00FEA276 /* WaterFlowCell.m in Sources */,
 				34B5E9AF18E80F1700B50BB7 /* MBProgressHUD+Show.m in Sources */,
 				3405EE8218F6E642009F9242 /* LeftViewController.m in Sources */,
+				79D13A7D18FFFEA8009479A9 /* Cell.m in Sources */,
 				349F0D8A18E7D1C7008E4EB2 /* SDWebImageDownloaderOperation.m in Sources */,
 				34B5EA4418E8242000B50BB7 /* MJRefreshHeaderView.m in Sources */,
 				3404953718F44BB500ADB5B8 /* IconView.m in Sources */,

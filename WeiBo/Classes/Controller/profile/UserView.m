@@ -7,6 +7,9 @@
 //
 
 #import "UserView.h"
+#import "FriendsViewController.h"
+
+
 #define kBoardMargin  10
 #define kLabelHeight    20
 #define kButtonWidth    70
@@ -15,11 +18,15 @@
 
 @implementation UserView
 
+
+
 - (id)initWithFrame:(CGRect)frame
 {
+    
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
         
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.jpg"]];
 //        [self _creatprofitView];
@@ -35,12 +42,15 @@
 -(IBAction)clickFriendsBtn:(UIButton *)friends
 {
     NSLog(@"%s",__func__);
+
+    
 }
 
 // 点击粉丝数push到粉丝列表
 -(IBAction)clickFllowersBtn:(UIButton *)fllowers
 {
     NSLog(@"%s",__func__);
+    
 }
 
 // 点击关注好友push到好友详细列表
@@ -54,6 +64,8 @@
 {
     NSLog(@"%s",__func__);
 }
+
+
 
 
 
@@ -129,10 +141,6 @@
     
 }
 
--(void)friendsAction
-{
-    NSLog(@"%s",__func__);
-}
 
 
 @end

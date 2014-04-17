@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="o3O-cN-hwu" customClass="UserView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="222"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg0.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="F7Z-mv-iNV">
@@ -36,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-gW-ybF">
-                    <rect key="frame" x="10" y="144" width="60" height="60"/>
+                    <rect key="frame" x="10" y="144" width="60" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="关注数">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,12 +45,12 @@
                         <action selector="clickFriendsBtn:" destination="o3O-cN-hwu" eventType="touchUpInside" id="PLk-C7-OYv"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar_default_big.png" translatesAutoresizingMaskIntoConstraints="NO" id="iXZ-6o-qeG">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="iXZ-6o-qeG">
                     <rect key="frame" x="10" y="39" width="85" height="85"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaH-qk-MNh">
-                    <rect key="frame" x="84" y="144" width="60" height="60"/>
+                    <rect key="frame" x="84" y="144" width="60" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="粉丝数">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +60,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM2-45-QNc">
-                    <rect key="frame" x="160" y="144" width="60" height="60"/>
+                    <rect key="frame" x="160" y="144" width="60" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="微博数">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,7 +70,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK7-KM-fPp">
-                    <rect key="frame" x="240" y="144" width="60" height="60"/>
+                    <rect key="frame" x="240" y="144" width="60" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="收藏">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,10 +82,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avater" destination="iXZ-6o-qeG" id="4wT-KI-Jpr"/>
+                <outlet property="description" destination="sYa-8P-bwg" id="UgU-4e-Ih2"/>
+                <outlet property="favouritesCount" destination="JK7-KM-fPp" id="uyB-MY-ExD"/>
+                <outlet property="followersCount" destination="WaH-qk-MNh" id="uVF-pP-bka"/>
+                <outlet property="friendsCount" destination="d2C-gW-ybF" id="PKs-n2-TQG"/>
+                <outlet property="screenName" destination="VPp-xX-r41" id="M7r-Lz-k4k"/>
+                <outlet property="statuses" destination="oM2-45-QNc" id="mbx-Ri-LJF"/>
+                <outlet property="url" destination="sg4-es-1zC" id="qS9-SZ-IJT"/>
+            </connections>
         </view>
     </objects>
     <resources>
-        <image name="avatar_default_big.png" width="85" height="85"/>
+        <image name="avatar_default.png" width="50" height="50"/>
         <image name="bg0.jpg" width="640" height="960"/>
     </resources>
 </document>
