@@ -8,6 +8,8 @@
 
 #import "UserView.h"
 #import "FriendsViewController.h"
+#import "UIView+Additions.h"
+
 
 
 #define kBoardMargin  10
@@ -30,11 +32,16 @@
         
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.jpg"]];
 //        [self _creatprofitView];
-        self.userInteractionEnabled = YES;
+//        self.userInteractionEnabled = YES;
+        self.avater.userInteractionEnabled = YES;
+        
+        
         
     }
     return self;
 }
+
+
 
 
 #pragma mark 四个按钮的方法实现
@@ -42,7 +49,11 @@
 -(IBAction)clickFriendsBtn:(UIButton *)friends
 {
     NSLog(@"%s",__func__);
-
+    
+    FriendsViewController *friend = [[FriendsViewController alloc] init];
+    
+    [self.viewController.navigationController pushViewController:friend animated:YES];
+    
     
 }
 
@@ -50,6 +61,8 @@
 -(IBAction)clickFllowersBtn:(UIButton *)fllowers
 {
     NSLog(@"%s",__func__);
+    
+    
     
 }
 
@@ -65,12 +78,27 @@
     NSLog(@"%s",__func__);
 }
 
+// 点击头像从系统中选择图片
+- (IBAction)chooseAvater:(UIButton *)avater
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+//    [self presentModalViewController:picker animated:YES];
+    
+    
+    
+}
+
+#pragma mark Image Picker Delegate
 
 
 
 
 
-
+/*
 #pragma mark profitView 布局子视图
 -(void)_creatprofitView
 {
@@ -140,7 +168,7 @@
 
     
 }
-
+*/
 
 
 @end

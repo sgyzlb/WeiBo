@@ -75,7 +75,7 @@
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
-    [self cutCurrentView];
+//    [self cutCurrentView];
     [super pushViewController:viewController animated:YES];
     
 }

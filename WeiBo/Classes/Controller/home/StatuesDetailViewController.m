@@ -67,15 +67,22 @@
 }
 
 #warning 未完成  点击 出现相应的界面
--(void)show:(UISegmentedControl *)sg
+-(void)showAction:(UISegmentedControl *)sg
 {
     int select = sg.selectedSegmentIndex;
     switch (select) {
         case 0:
             
+            
+            NSLog(@"显示转发页面");
+            break;
+            
+        case 2:
+            NSLog(@"显示点赞页面");
             break;
             
         default:
+            NSLog(@"显示评论页面");
             break;
     }
     
@@ -89,7 +96,7 @@
             UISegmentedControl *sg = [[UISegmentedControl alloc] initWithItems:titleArray];
             sg.selectedSegmentIndex = 1 ;//设置默认选择项索引
             sg.backgroundColor = [UIColor whiteColor];
-            [sg addTarget:self action:@selector(show:) forControlEvents:UIControlEventValueChanged];
+            [sg addTarget:self action:@selector(showAction:) forControlEvents:UIControlEventValueChanged];
 
 //            sg.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
             return sg;
@@ -139,7 +146,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
             
         }
-        cell.textLabel.text = @"测试拉";
+        cell.textLabel.text = @"测试啦";
           return cell;
     }
   

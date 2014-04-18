@@ -16,6 +16,7 @@
 
 @property (nonatomic,strong)  UserView *userView;
 
+// 用户发布过的微博数
 @property (nonatomic,strong) NSMutableArray *usInfoDataList;
 
 @end
@@ -45,7 +46,7 @@
     
     
     [self loadUserInof];
-//    [self loadAllCountOfStatuses];
+    [self loadAllCountOfStatuses];
 
 }
 
@@ -57,13 +58,18 @@
     NSURLRequest *request = [NSURLRequest requestWithPath:urlStr params:nil];
     
     AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"JSON === %@",JSON);
+//        NSLog(@"JSON === %@",JSON);
         self.userView.screenName.text = JSON[@"screen_name"];
-        [self.userView.avater setImageWithURL:[NSURL URLWithString:JSON[@"avatar_large"]] placeholderImage:[UIImage imageNamed:@"avatar_default"]];
+        [self.userView.avater setImageWithURL:[NSURL URLWithString:JSON[@"avatar_large"]] placeholderImage:[UIImage imageNamed:@"avatar_default.png"]];
         self.userView.description.text = JSON[@"description"];
-        self.userView.statuses.titleLabel.text = JSON[@"status"];
-        NSLog(@"微博数 = %d",self.usInfoDataList.count);
+        self.userView.city.text = JSON[@"location"];
+        if ([JSON[@"gender"] isEqualToString:@"m"]) {
+            self.userView.gender.image = [UIImage imageNamed:@"common_icon_male.png"];
+        }else{
+            self.userView.gender.image = [UIImage imageNamed:@"common_icon_female.png"];
+        }
         
+        // common_icon_male
         [self.tableView reloadData];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"error == %@",error);
@@ -75,15 +81,17 @@
 
 -(void)loadAllCountOfStatuses
 {
-    NSString *urlStr = [NSString stringWithFormat:@"users/counts.json?%@=%@&uid=%@",kAccessToken,[AccountTool shareAccountTool].currentAcount.accessToken,[AccountTool shareAccountTool].currentAcount.uid];
+#warning 粉丝 微博 好友等均为NSNumber类型的
+    NSString *urlStr = [NSString stringWithFormat:@"users/show.json?%@=%@&uid=%@",kAccessToken,[AccountTool shareAccountTool].currentAcount.accessToken,[AccountTool shareAccountTool].currentAcount.uid];
     NSURLRequest *request = [NSURLRequest requestWithPath:urlStr params:nil];
     AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"JSON-------------%@",JSON);
-        self.userView.friendsCount.titleLabel.text = JSON[@"friends_count"];
-//        self.userView.favouritesCount.titleLabel.text = JSON[@"followers_count"];
-        self.userView.followersCount.titleLabel.text = JSON[@"followers_count"];
-        self.userView.statuses.titleLabel.text = JSON[@"statuses_count"];
+//        NSLog(@"JSON-------------%@",JSON);
+        self.userView.friendsCount.text = [NSString stringWithFormat:@"%@",JSON[@"friends_count"]];
+        self.userView.followersCount.text = [NSString stringWithFormat:@"%@",JSON[@"followers_count"]];
+        self.userView.statuses.text = [NSString stringWithFormat:@"%@",JSON[@"statuses_count"]];
+        self.userView.favouritesCount.text = [NSString stringWithFormat:@"%@",JSON[@"favourites_count"]];
         
+        [self.tableView reloadData];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"error = %@",error);
@@ -97,6 +105,9 @@
 
 #pragma mark - Table view data source
 
+
+
+
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     return self.userView;
@@ -104,7 +115,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 200;
+    return 165;
 }
 
 
@@ -121,7 +132,7 @@
 //        return 1;
 //    }
     
-    return self.usInfoDataList.count;
+    return [self.userView.statuses.text integerValue];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

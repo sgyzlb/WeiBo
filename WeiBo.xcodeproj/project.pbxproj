@@ -1004,11 +1004,14 @@
 		790133B218FF85C100FEA276 /* bg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 790133A918FF85C100FEA276 /* bg7.jpg */; };
 		790133B318FF85C100FEA276 /* bg8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 790133AA18FF85C100FEA276 /* bg8.jpg */; };
 		790133B718FF8CDC00FEA276 /* WaterFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 790133B618FF8CDC00FEA276 /* WaterFlowCell.m */; };
+		799790B51900DB4300A5F2A2 /* OtherUsersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799790B41900DB4300A5F2A2 /* OtherUsersCell.m */; };
+		799790BD1901057A00A5F2A2 /* OtherUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799790BC1901057A00A5F2A2 /* OtherUsersCell.xib */; };
+		799790C0190113D800A5F2A2 /* FriendsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799790BF190113D800A5F2A2 /* FriendsDetailViewController.m */; };
 		79D13A6F18FFB760009479A9 /* UserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A6E18FFB760009479A9 /* UserView.m */; };
 		79D13A7518FFCF9E009479A9 /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13A7418FFCF9E009479A9 /* UserView.xib */; };
 		79D13A7918FFDF4D009479A9 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A7718FFDF4D009479A9 /* FriendsViewController.m */; };
 		79D13A7A18FFDF4D009479A9 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */; };
-		79D13A7D18FFFEA8009479A9 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A7C18FFFEA8009479A9 /* Cell.m */; };
+		79F68B571900D5D20005EF4E /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F68B561900D5D20005EF4E /* UIView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2092,14 +2095,19 @@
 		790133AA18FF85C100FEA276 /* bg8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg8.jpg; sourceTree = "<group>"; };
 		790133B518FF8CDC00FEA276 /* WaterFlowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowCell.h; sourceTree = "<group>"; };
 		790133B618FF8CDC00FEA276 /* WaterFlowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowCell.m; sourceTree = "<group>"; };
+		799790B31900DB4300A5F2A2 /* OtherUsersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherUsersCell.h; sourceTree = "<group>"; };
+		799790B41900DB4300A5F2A2 /* OtherUsersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherUsersCell.m; sourceTree = "<group>"; };
+		799790BC1901057A00A5F2A2 /* OtherUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherUsersCell.xib; sourceTree = "<group>"; };
+		799790BE190113D800A5F2A2 /* FriendsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsDetailViewController.h; sourceTree = "<group>"; };
+		799790BF190113D800A5F2A2 /* FriendsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsDetailViewController.m; sourceTree = "<group>"; };
 		79D13A6D18FFB760009479A9 /* UserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserView.h; sourceTree = "<group>"; };
 		79D13A6E18FFB760009479A9 /* UserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserView.m; sourceTree = "<group>"; };
 		79D13A7418FFCF9E009479A9 /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
 		79D13A7618FFDF4D009479A9 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		79D13A7718FFDF4D009479A9 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
-		79D13A7B18FFFEA8009479A9 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		79D13A7C18FFFEA8009479A9 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		79F68B551900D5D20005EF4E /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		79F68B561900D5D20005EF4E /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2107,11 +2115,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3454419218DD84DD002A09C7 /* UIKit.framework in Frameworks */,
 				3412857118FD8AD800C75612 /* QuartzCore.framework in Frameworks */,
 				34B5E9C218E81E0F00B50BB7 /* AudioToolbox.framework in Frameworks */,
 				34B5E9C018E81E0800B50BB7 /* AVFoundation.framework in Frameworks */,
 				3454419018DD84DD002A09C7 /* CoreGraphics.framework in Frameworks */,
-				3454419218DD84DD002A09C7 /* UIKit.framework in Frameworks */,
 				3454418E18DD84DD002A09C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2640,6 +2648,8 @@
 		3454424418DDCD9E002A09C7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				79F68B551900D5D20005EF4E /* UIView+Additions.h */,
+				79F68B561900D5D20005EF4E /* UIView+Additions.m */,
 				3454424518DDCDA7002A09C7 /* UIImage+image.h */,
 				3454424618DDCDA7002A09C7 /* UIImage+image.m */,
 				3454429518DE0043002A09C7 /* NSString+file.h */,
@@ -3464,14 +3474,17 @@
 			children = (
 				34A6589A18DED6E700D34948 /* ProfileViewController.h */,
 				34A6589B18DED6E700D34948 /* ProfileViewController.m */,
-				79D13A7618FFDF4D009479A9 /* FriendsViewController.h */,
-				79D13A7718FFDF4D009479A9 /* FriendsViewController.m */,
-				79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */,
 				79D13A6D18FFB760009479A9 /* UserView.h */,
 				79D13A6E18FFB760009479A9 /* UserView.m */,
 				79D13A7418FFCF9E009479A9 /* UserView.xib */,
-				79D13A7B18FFFEA8009479A9 /* Cell.h */,
-				79D13A7C18FFFEA8009479A9 /* Cell.m */,
+				79D13A7618FFDF4D009479A9 /* FriendsViewController.h */,
+				79D13A7718FFDF4D009479A9 /* FriendsViewController.m */,
+				79D13A7818FFDF4D009479A9 /* FriendsViewController.xib */,
+				799790B31900DB4300A5F2A2 /* OtherUsersCell.h */,
+				799790B41900DB4300A5F2A2 /* OtherUsersCell.m */,
+				799790BC1901057A00A5F2A2 /* OtherUsersCell.xib */,
+				799790BE190113D800A5F2A2 /* FriendsDetailViewController.h */,
+				799790BF190113D800A5F2A2 /* FriendsDetailViewController.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -5325,6 +5338,7 @@
 				34A49A3E18E2F6D800DD6AB8 /* common_button_red_disable 3.png in Resources */,
 				34A49B7918E2F6D800DD6AB8 /* common_icon_membership@2x 4.png in Resources */,
 				79D13A7518FFCF9E009479A9 /* UserView.xib in Resources */,
+				799790BD1901057A00A5F2A2 /* OtherUsersCell.xib in Resources */,
 				34A49B0618E2F6D800DD6AB8 /* common_card_topright_background_highlighted 3.png in Resources */,
 				34A49ABC18E2F6D800DD6AB8 /* common_card_center_background_highlighted@2x.png in Resources */,
 				34A499E018E2F6D800DD6AB8 /* common_button_big_red_highlighted.png in Resources */,
@@ -5428,6 +5442,7 @@
 				34A6589918DED6DC00D34948 /* MoreViewController.m in Sources */,
 				34A49C0818E325F500DD6AB8 /* Account.m in Sources */,
 				34A5717A18E6F218001AFDAA /* Status.m in Sources */,
+				799790B51900DB4300A5F2A2 /* OtherUsersCell.m in Sources */,
 				34B5EA4318E8242000B50BB7 /* MJRefreshFooterView.m in Sources */,
 				34B2151318FC4AA6005D3637 /* BaseNavigationViewController.m in Sources */,
 				34A659E318DF2BE000D34948 /* SendStatusViewController.m in Sources */,
@@ -5449,7 +5464,6 @@
 				790133B718FF8CDC00FEA276 /* WaterFlowCell.m in Sources */,
 				34B5E9AF18E80F1700B50BB7 /* MBProgressHUD+Show.m in Sources */,
 				3405EE8218F6E642009F9242 /* LeftViewController.m in Sources */,
-				79D13A7D18FFFEA8009479A9 /* Cell.m in Sources */,
 				349F0D8A18E7D1C7008E4EB2 /* SDWebImageDownloaderOperation.m in Sources */,
 				34B5EA4418E8242000B50BB7 /* MJRefreshHeaderView.m in Sources */,
 				3404953718F44BB500ADB5B8 /* IconView.m in Sources */,
@@ -5467,6 +5481,8 @@
 				3404953D18F4575F00ADB5B8 /* StatuesImageListView.m in Sources */,
 				349F0D8418E7D1C7008E4EB2 /* MKAnnotationView+WebCache.m in Sources */,
 				3454429718DE0043002A09C7 /* NSString+file.m in Sources */,
+				799790C0190113D800A5F2A2 /* FriendsDetailViewController.m in Sources */,
+				79F68B571900D5D20005EF4E /* UIView+Additions.m in Sources */,
 				34A5717D18E7010F001AFDAA /* StatueToolResques.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
