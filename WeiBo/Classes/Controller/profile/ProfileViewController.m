@@ -12,7 +12,7 @@
 #import "AccountTool.h"
 #import "Account.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic,strong)  UserView *userView;
 
@@ -49,6 +49,18 @@
     [self loadAllCountOfStatuses];
 
 }
+
+-(void)click:(UIButton *)btn
+{
+    UIImagePickerController *p = [[UIImagePickerController alloc] init];
+    p.delegate = self;
+    p.allowsEditing = YES;
+    p.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:p animated:YES completion:^{
+        NSLog(@"完成");
+    }];
+}
+
 
 #pragma mark 请求数据
 -(void)loadUserInof

@@ -1007,6 +1007,7 @@
 		799790B51900DB4300A5F2A2 /* OtherUsersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799790B41900DB4300A5F2A2 /* OtherUsersCell.m */; };
 		799790BD1901057A00A5F2A2 /* OtherUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799790BC1901057A00A5F2A2 /* OtherUsersCell.xib */; };
 		799790C0190113D800A5F2A2 /* FriendsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799790BF190113D800A5F2A2 /* FriendsDetailViewController.m */; };
+		799790C219015FA100A5F2A2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799790C119015FA100A5F2A2 /* AssetsLibrary.framework */; };
 		79D13A6F18FFB760009479A9 /* UserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A6E18FFB760009479A9 /* UserView.m */; };
 		79D13A7518FFCF9E009479A9 /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13A7418FFCF9E009479A9 /* UserView.xib */; };
 		79D13A7918FFDF4D009479A9 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D13A7718FFDF4D009479A9 /* FriendsViewController.m */; };
@@ -2100,6 +2101,7 @@
 		799790BC1901057A00A5F2A2 /* OtherUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherUsersCell.xib; sourceTree = "<group>"; };
 		799790BE190113D800A5F2A2 /* FriendsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsDetailViewController.h; sourceTree = "<group>"; };
 		799790BF190113D800A5F2A2 /* FriendsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsDetailViewController.m; sourceTree = "<group>"; };
+		799790C119015FA100A5F2A2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		79D13A6D18FFB760009479A9 /* UserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserView.h; sourceTree = "<group>"; };
 		79D13A6E18FFB760009479A9 /* UserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserView.m; sourceTree = "<group>"; };
 		79D13A7418FFCF9E009479A9 /* UserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
@@ -2115,6 +2117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799790C219015FA100A5F2A2 /* AssetsLibrary.framework in Frameworks */,
 				3454419218DD84DD002A09C7 /* UIKit.framework in Frameworks */,
 				3412857118FD8AD800C75612 /* QuartzCore.framework in Frameworks */,
 				34B5E9C218E81E0F00B50BB7 /* AudioToolbox.framework in Frameworks */,
@@ -2541,6 +2544,7 @@
 		3454418C18DD84DD002A09C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				799790C119015FA100A5F2A2 /* AssetsLibrary.framework */,
 				3412857018FD8AD800C75612 /* QuartzCore.framework */,
 				34B5E9C118E81E0F00B50BB7 /* AudioToolbox.framework */,
 				34B5E9BF18E81E0800B50BB7 /* AVFoundation.framework */,

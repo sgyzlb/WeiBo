@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 GML. All rights reserved.
 //
 
+#import <AssetsLibrary/AssetsLibrary.h>
 #import "UserView.h"
 #import "FriendsViewController.h"
 #import "UIView+Additions.h"
@@ -85,16 +86,59 @@
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-//    [self presentModalViewController:picker animated:YES];
+    [self.viewController presentViewController:picker animated:YES completion:^{
+        NSLog(@"选择图片");
+    }];
     
     
     
 }
 
+// 更改背景
+- (IBAction)chooseBg:(UIButton *)sende
+{
+ 
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self.viewController presentViewController:picker animated:YES completion:^{
+        NSLog(@"选择背景");
+    }];
+
+}
+
 #pragma mark Image Picker Delegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library assetForURL:[info objectForKey:UIImagePickerControllerReferenceURL]
+             resultBlock:^(ALAsset *asset)
+     {
+         ALAssetRepresentation *representation = [asset defaultRepresentation];
+         CGImageRef imgRef = [representation fullResolutionImage];
+         UIImage *image = [UIImage imageWithCGImage:imgRef
+                                              scale:representation.scale
+                                        orientation:(UIImageOrientation)representation.orientation];
+         NSData * data = UIImageJPEGRepresentation(image, 0.5);
+         self.avater.image = [UIImage imageWithData:data];
+     }failureBlock:^(NSError *error){
+         NSLog(@"couldn't get asset: %@", error);
+     }
+     ];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    
+//    NSLog(@"%@",info);
+//    self.avater.image = [info valueForKey:@"UIImagePickerControllerOriginalImage"];
+////    self.avater.image =
+}
 
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editInfo
+{
+    self.avater.image = image;
+}
 
 
 

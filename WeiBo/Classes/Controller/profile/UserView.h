@@ -38,5 +38,7 @@
 // 点击选择头像
 - (IBAction)chooseAvater:(UIButton *)avater;
 
+// 点击更改背景
+- (IBAction)chooseBg:(UIButton *)bg;
 
 @end
