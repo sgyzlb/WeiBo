@@ -60,7 +60,7 @@
 #pragma mark 发微博界面：sendStatus
 -(void)sendStatus
 {
-
+    
 }
 
 #pragma mark 发微博界面：cencal

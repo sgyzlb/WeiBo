@@ -111,6 +111,7 @@
 #pragma mark Image Picker Delegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    // 对图片进行压缩
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library assetForURL:[info objectForKey:UIImagePickerControllerReferenceURL]
              resultBlock:^(ALAsset *asset)
@@ -123,21 +124,12 @@
          NSData * data = UIImageJPEGRepresentation(image, 0.5);
          self.avater.image = [UIImage imageWithData:data];
      }failureBlock:^(NSError *error){
-         NSLog(@"couldn't get asset: %@", error);
+         NSLog(@"压缩错误: = %@", error);
      }
      ];
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    
-//    NSLog(@"%@",info);
-//    self.avater.image = [info valueForKey:@"UIImagePickerControllerOriginalImage"];
-////    self.avater.image =
-}
-
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editInfo
-{
-    self.avater.image = image;
+    NSLog(@"图片信息 = info%@",info);
 }
 
 
